@@ -1,19 +1,35 @@
 <template>
-  <section id="Skill" class="scroll_sec">
-    <div class="skill_text">
+  <section id="Cloning" class="scroll_sec">
+    <div class="cloning_text">
       <h1>Cloning</h1>
       <h2></h2>
       <p id="dynamic"></p>
+      <div class="cloning_box">
+        <ul :class="Fstyle">
+          <li v-for="wcl of cloningS">
+            <a :href="wcl.href">{{ wcl.name }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
 <script>
 export default {
   name: "App",
+  data(){
+    return{
+      cloningS:[
+        { name : "도시락통(웹 클로닝)", href : "https://github.com/psh2661/2023.01.05_dosirak.git" },
+        { name : "싱그러운집(웹 클로닝)", href : "https://github.com/psh2661/2023.01.05_singu.git" },
+        { name : "평창리치먼드(웹 클로닝)", href : "https://github.com/psh2661/2023.01.05_richmond.git" },
+      ],
+    };
+  },
   mounted() {
       //타이핑 효과
       const target = document.querySelector('#dynamic');
-      const string = "기초의 시작, 웹 클로닝입니다." //원하는 텍스트
+      const string = "저의 기초의 시작, 웹 클로닝입니다." //원하는 텍스트
       const split = string.split(""); 
       //string의 텍스트를 여러개의 문자열로 나눠줌
 
@@ -57,69 +73,30 @@ section{
   width: 100%; height: 100vh;
   background-color: black;
 }
-.skill_text{
+.cloning_text{
   width: 100%; height: auto;
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 70px 0;
 }
-.skill_container{
-  width: 100%; height: auto;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.flow-text {
-  display: flex;
-  flex: 0 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: 0.3s;
-  font-size: 2.5rem;
-  font-weight:bold;
-  color: #9D9993;
-}
-.flow-text:hover {
-  color: #000;
-}
-.flow-text:hover .skill_wrap {
-  animation-play-state: paused;
-  cursor: pointer;
-}
-.skill_wrap {
-  animation: textLoop 30s linear infinite;
-  padding-right: 1.4881vw;
-}
-
-@keyframes textLoop {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
 /*css 작성하기*/
-.skill_text>h1 {
+.cloning_text>h1 {
   font-size: 60px;
   font-weight: bold;
   color: white;
 }
-.skill_text>h2 {
+.cloning_text>h2 {
   font-size: 20px;
   color: white;
 }
-.skill_text #dynamic {
+.cloning_text #dynamic {
   position: relative;
   display: inline-block;
   font-size: 35px;
   color: white;
 }
 /*커서모양 만들기*/
-.skill_text #dynamic::after {
+.cloning_text #dynamic::after {
     content: "";
     display: block;
     position: absolute;
@@ -129,8 +106,30 @@ section{
     color: white;
 }
 /*css active클래스에 속성추가*/
-.skill_text #dynamic.active::after{
+.cloning_text #dynamic.active::after{
     /* display: none; */
     color: yellow;
+}
+
+/* cloning_box */
+.cloning_box{
+  margin: 0 auto;
+}
+.cloning_box>ul{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;}
+.cloning_box>ul>li{
+  width: 30%; height: auto;
+  box-sizing: border-box;
+  background-color: #ffcc00;
+  border-radius: 30px;
+  text-align: center;
+}
+.cloning_box>ul>li>a{
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
 }
 </style>

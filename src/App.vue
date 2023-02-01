@@ -3,7 +3,7 @@
   <intro />
   <about />
   <project />
-  <skill />
+  <cloning />
   <contact />
 </template>
 
@@ -12,7 +12,7 @@ import headerN from "./components/headerN.vue";
 import intro from "./components/intro.vue";
 import about from "./components/about.vue";
 import project from "./components/project.vue";
-import skill from "./components/skill.vue";
+import cloning from "./components/cloning.vue";
 import contact from "./components/contact.vue";
 
 import AOS from 'aos'
@@ -24,7 +24,7 @@ export default {
     intro,
     about,
     project,
-    skill,
+    cloning,
     contact,
 
     AOS,

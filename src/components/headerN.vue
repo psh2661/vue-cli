@@ -13,8 +13,8 @@
       <li v-on:click="gosection" data-target="Project01" class="gotosce">
         Project
       </li>
-      <li v-on:click="gosection" data-target="Skill" class="gotosce">
-        Skill
+      <li v-on:click="gosection" data-target="Cloning" class="gotosce">
+        Cloning
       </li>
       <li v-on:click="gosection" data-target="Contact" class="gotosce">
         Contact
@@ -45,11 +45,11 @@
           window.addEventListener("scroll",()=>{
             const menu = document.getElementById("nav_header");
             const Project01 = document.getElementById("Project01");
-            const Skill = document.getElementById("Skill");
+            const Cloning = document.getElementById("Cloning");
             const scrollY = window.pageYOffset;
             if( Project01.offsetTop <= scrollY ){
               menu.classList.add('change_color');
-              if(Skill.offsetTop <= scrollY){
+              if(Cloning.offsetTop <= scrollY){
               menu.classList.remove('change_color');
             }
             }else{

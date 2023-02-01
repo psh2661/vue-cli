@@ -12,11 +12,12 @@
           의미가 담긴 사이트로 리뉴얼을 해보았습니다.</p>
         <p class="project_skill">SKILL : HTML5, CSS3 , JAVAscript, node, MySQL</p>
         <p class="project_date">작업 기간: 2022년 09월 초 ~ 2022년 11월 말</p>
-        <a class="show_more" href="#">Show More ▶</a>
+        <a class="show_more" href="https://github.com/psh2661/seomoon02.git">Show More ▶</a>
       </div>
       <div class="right_cont">
         <div class="aos_img">
-          <img src="../assets/seomoon_mok.png">
+          <img class="web_ver" src="../assets/seomoon_mok.png">
+          <img class="m_ver" src="../assets/seomoon_mok_m.png">
         </div>
       </div>
     </div>
@@ -34,11 +35,12 @@
           그 중 <span>“비건(vegan)"</span>을 주제로<br>심플하고 차분한 분위기를 연출하여<br>리뉴얼 작업을 하였습니다.</p>
         <p class="project_skill">SKILL : HTML5, CSS3 , JAVAscript, node, MySQL</p>
         <p class="project_date">작업 기간: 2022년 09월 초 ~ 2022년 11월 말</p>
-        <a class="show_more" href="#">Show More ▶</a>
+        <a class="show_more" href="https://github.com/psh2661/2023.01.05_eyeNlip.git">Show More ▶</a>
       </div>
       <div class="right_cont">
         <div class="aos_img">
-          <img src="../assets/eyenlip_mok.png">
+          <img class="web_ver" src="../assets/eyenlip_mok.png">
+          <img class="m_ver" src="../assets/eyenlip_mok_m.png">
         </div>
       </div>
     </div>
@@ -59,11 +61,12 @@
         </p>
         <p class="project_skill">SKILL : HTML5, CSS3 , JAVAscript, node, MySQL</p>
         <p class="project_date">작업 기간: 2022년 11월 초 ~ 2022년 12월 말</p>
-        <a class="show_more" href="#">Show More ▶</a>
+        <a class="show_more" href="https://github.com/walkingcabbage/-.git">Show More ▶</a>
       </div>
       <div class="right_cont">
         <div class="aos_img">
-          <img src="../assets/seomoon_mok.png">
+          <img class="web_ver" src="../assets/seomoon_mok.png">
+          <img class="m_ver" src="../assets/seomoon_mok_m.png">
         </div>
       </div>
     </div>
@@ -85,7 +88,7 @@ section{
   color: #888888;
 }
 .project_cont{
-  padding-top: 50px;
+  padding-top: 70px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -110,8 +113,17 @@ section{
   border: 1px solid #ffcc00;
   box-sizing: border-box;
 }
-.aos_img>img{
+.aos_img{
+  position: relative;
+}
+.web_ver{
+  padding-top: 50px;
   width: 700px; height: auto;
+}
+.m_ver{
+  position: absolute;
+  right: -20px; bottom: -70px;
+  width: 200px; height: auto;
 }
 /* project_seomoon */
 .project_seomoon{

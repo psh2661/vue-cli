@@ -6,6 +6,11 @@
         <p>탄력있는 아이디어로 새로움을 보여주는 개발자!
           <br>사용자에게 늘 재미있고 즐기기 좋은 사이트를 디자인합니다.
         </p>
+        <p class="skill">
+          HTML5, CSS3, JAVAscript, jQuery, node.js, vue.js<br>
+          VScode, MySQL, Heroku, Git, Github, AWS<br>
+          Figma, Illustrator, Photoshop, Blender, Maya
+        </p>
         <img src="../assets/mas.png">
       </div>
       <div class="about_me_cont">
@@ -77,6 +82,9 @@ section{
   display: flex;
   justify-content: space-between;
 }
+.about_me_txt{
+  position: relative;
+}
 .about_me_txt>h1{
   text-align: left;
   font-size: 60px;
@@ -88,6 +96,17 @@ section{
   font-size: 20px;
   color: white;
   padding: 20px 0;
+}
+.about_me_txt>.skill{
+  font-size: 16px;
+  color: #ffcc00;
+}
+.about_me_txt>img{
+  position: absolute;
+  left: 350px; bottom: 20px;
+  width: 350px;
+  height: auto;
+  object-fit: cover;
 }
 .about_me_cont>div{
   padding-bottom: 15px;

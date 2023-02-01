@@ -9,22 +9,22 @@
           <li><a href="tel:010-3850-2668">Phone 010-3850-2668</a></li>
           <li><a href="https://github.com/psh2661/2023.01.05_eyeNlip.git" target="_blank">Github https://github.com/psh2661</a></li>
         </ul> -->
-    </div>
-
-    <div class="back color-9">
-      <div class="row columns">
-        <h3>Effect 39</h3>
-        <ul class="menu align-center expanded text-center SMN_effect-39">
-          <li><a href="mailto:psh2661@gmail.com">Email psh2661@gmail.com</a></li>
-          <li><a href="tel:010-3850-2668">Phone 010-3850-2668</a></li>
-          <li><a href="https://github.com/psh2661/2023.01.05_eyeNlip.git" target="_blank">Github https://github.com/psh2661</a></li>
-        </ul>
+        <div class="dimg back color-9">
+          <div class="row columns">
+            <ul class="menu align-center expanded text-center SMN_effect-39">
+              <li><a href="mailto:psh2661@gmail.com">Email psh2661@gmail.com</a></li>
+              <li><a href="tel:010-3850-2668">Phone 010-3850-2668</a></li>
+              <li><a href="https://github.com/psh2661/2023.01.05_eyeNlip.git" target="_blank">Github https://github.com/psh2661</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-	  </div>
-
+      <div class="contact_right_img">
+        <img src="../assets/mas.png">
+      </div>
+    </div>
     <div class="contact_bot_txt">
       <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>© 2023 PARK SEOHEE. All Rights Reserved.</p>
-    </div>
     </div>
   </section>
 </template>
@@ -50,7 +50,9 @@ section{
   width: 100%; height: auto;
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
 }
 .contact_me>h1{
   font-size: 60px;
@@ -79,7 +81,7 @@ section{
 
 /*  */
 .menu{
-  padding: 20px 0 100px 0;
+  /* padding: 20px 0 100px 0; */
 }
 .menu>li{
   padding-bottom: 30px;
@@ -132,5 +134,14 @@ section{
 	transition: all 0.3s 0.3s ease;
 	text-decoration: none;
 	color: black;
+}
+
+.dimg{
+  display: flex;
+}
+.contact_right_img>img{
+  width: 500px;
+  height: auto;
+  object-fit: cover;
 }
 </style>
