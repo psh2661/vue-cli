@@ -1,30 +1,82 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <headerN />
+  <intro />
+  <about />
+  <project />
+  <skill />
+  <contact />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import headerN from "./components/headerN.vue";
+import intro from "./components/intro.vue";
+import about from "./components/about.vue";
+import project from "./components/project.vue";
+import skill from "./components/skill.vue";
+import contact from "./components/contact.vue";
 
-nav {
-  padding: 30px;
-}
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+export default {
+  name: "App",
+  components : {
+    headerN,
+    intro,
+    about,
+    project,
+    skill,
+    contact,
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    AOS,
+  },
+  created() {
+    AOS.init();
+  },
+  setup(){
+    window.onload = function(){
+      const elm = document.querySelectorAll('.scroll_sec');
+      const elmCount = elm.length;
+      elm.forEach(function(item, index){
+        item.addEventListener('mousewheel', function(event){
+          event.preventDefault();
+          let delta = 0;
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+          if (!event) event = window.event;
+          if (event.wheelDelta) {
+              delta = event.wheelDelta / 120;
+              if (window.opera) delta = -delta;
+          } 
+          else if (event.detail)
+              delta = -event.detail / 3;
+
+          let moveTop = window.scrollY;
+          let elmSelector = elm[index];
+
+          // wheel down : move to next section
+          if (delta < 0){
+            if (elmSelector !== elmCount-1){
+              try{
+                moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
+              }catch(e){}
+            }
+          }
+          // wheel up : move to previous section
+          else{
+            if (elmSelector !== 0){
+              try{
+                moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
+              }catch(e){}
+            }
+          }
+
+          const body = document.querySelector('html');
+          window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
+        });
+      });
+    }
+  },
+};
+</script>
+
+<style scoped>
 </style>
